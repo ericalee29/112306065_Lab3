@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Get Number and Display</title>
+</head>
+<body>
+  <script>
+    var firstInput = window.prompt("Please enter the first number:");
+    var secondInput = window.prompt("Please enter the second number:");
+    if (parseFloat(firstInput) > parseFloat(secondInput)) {
+        document.body.style.backgroundColor = "lightblue";
+        var result = document.createElement('div');
+        result.textContent = firstInput + " > " + secondInput;
+        document.body.appendChild(result);
+      } else if (parseFloat(secondInput) > parseFloat(firstInput)) {
+        document.body.style.backgroundColor = "orange";
+        var result = document.createElement('div');
+        result.textContent = secondInput + " > " + firstInput;
+        document.body.appendChild(result);
+      } else {
+        document.body.style.backgroundColor = "lightyellow";
+        var result = document.createElement('div');
+        result.textContent = secondInput + " == " + firstInput;
+        document.body.appendChild(result);
+      }
+  </script>
+   <div class="button-container">
+    <button class="button blue" onclick="alert(firstInput)">firstNumber</button>
+    <button class="button red" onclick="alert(secondInput)">secondNumber</button>
+  </div>
+</body>
+</html>
